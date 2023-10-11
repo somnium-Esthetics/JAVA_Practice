@@ -1,0 +1,37 @@
+조건 
+1. 전역변수 선언 / 정적 메서드 구성
+2. 전투 프로세스
+	2-1 히어로 공격
+		데미지 (SUM) = hero_level*10 + hero_power*30
+		1) monster_defense >= sum  경우 moster_hp 유지
+		2) else monster_hp = monster_hp+ monster_defense- sum;
+	2-2 몬스터 죽음
+		hero_exp += monster_exp
+		hero_money += monster_money
+	2-3 몬스터 공격
+		1) hero_defense >= monster_power 경우 hero_hp 유지
+		2) else hero_hp = hero_hp + hero_defense - monsterpower
+	2-4 히어로 죽음
+		hero_hp <=0 일때 hero_hp = 1
+		부활 메세지 출력
+
+3. 레벨업 프로세스
+	hero_exp >= hero_level*80 경우 hero_level +=1, 레벨 증가 메세지, 
+						hero_money+=hero_lavel*50,레벨 증가 기념 돈 증가 메세지출력
+						경험치 초기화
+4. 몬스터 구성
+	살쾡이 추가
+		monster_name = 살쾡이
+		monster_hp = 2000
+		monster_mp = 0
+		monster_level = 5
+		monster_power = 100
+		monster_defense = 20
+		monster_money = 30
+		monster_exp  = 50
+5. 포션 상점 프로세스
+	hero_power += 3
+	hero_defense += 3
+	hero_exp +=50
+	hero_hp += 50
+	hero_mp += 50
